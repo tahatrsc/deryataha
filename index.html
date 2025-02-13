@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derya & Taha - Aşk Hikayemiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff4d6b, #ff7eb3);
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            /* Tam ekran yüksekliği */
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff6b81, 0 0 30px #ff6b81;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 3em;
+            position: relative;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff6b81, 0 0 30px #ff6b81;
+        }
+        
+        .gallery,
+        .timeline,
+        .love-note {
+            padding: 30px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .photo-gallery {
+            display: flex;
+            gap: 24px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        
+        .photo img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        .photo img:hover {
+            transform: scale(1.15);
+        }
+        
+        .love-note .note {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .love-button {
+            padding: 12px 24px;
+            font-size: 1.7em;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #ff6b81, #ff4757);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 11px;
+            margin-bottom: inherit;
+        }
+        
+        .love-button img {
+            width: 50px;
+        }
+        
+        .section-title img {
+            width: 150px;
+        }
+        
+        .love-button:hover {
+            background: #ff2e63;
+        }
+        
+        @keyframes hearts {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            bottom: 0;
+            animation: hearts 3s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero">
+            <video autoplay loop muted class="hero-video">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <h1 class="glow">💖 Dünyanın En Güzel Kızına 💖</h1>
+            <p class="subtitle">Seni çok Seviyorum</p>
+            <p class="subtitle">DERYA 💖 TAHA</p>
+        </div>
+
+    </div>
+    <audio id="loveMusic" src="Derya-Bedavaci-Canimin-Ici-99.mp3" loop></audio>
+
+    <button id="playMusicButton" class="love-button"><img src="kalp.gif" >Beni Seviyorsan Tıkla<img src="kalp.gif" ></button>
+    <section class="gallery">
+        <h2 class="section-title"></h2>
+        <div class="photo-gallery">
+            <div class="photo"><img src="foto9.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto5.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto.jpg" alt="Anı 1"></div>
+            <div class="photo"><img src="foto1.jpg" alt="Anı 2"></div>
+            <div class="photo"><img src="foto2.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto3.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto4.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto8.jpg" alt="Anı 1"></div>
+            <div class="photo"><img src="foto6.jpg" alt="Anı 1"></div>
+            <div class="photo"><img src="foto7.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto10.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto11.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto14.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto12.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto15.jpg" alt="Anı 3"></div>
+        </div>
+    </section>
+    <section class="love-note">
+        <h2 class="section-title"> <img src="gif2.gif"></h2>
+        <p class="note">Sen benim için dünyadaki en güzel insansın. Gözlerin yıldızlar kadar parlak, gülüşün ise en güzel melodiden bile tatlı. Her an, her saniye seni sevmek benim için bir mucize. Sonsuza kadar seninleyim... 💖</p>
+    </section>
+
+    <button class="love-button" onclick="showLoveMessage()">Seni Seviyorum ❤️</button>
+
+
+
+
+    <script>
+        document.getElementById("playMusicButton").onclick = function() {
+            const loveMusic = document.getElementById("loveMusic");
+            loveMusic.play(); // Şarkıyı başlat
+            this.style.display = 'none'; // Butonu gizle
+        };
+
+        function showLoveMessage() {
+            alert("❤️ SEVGİLİLER GÜNÜMÜZ KUTLU OLSUN ❤️");
+        }
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 5 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }, 500);
+    </script>
+</body>
+
+</html>

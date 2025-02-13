@@ -65,10 +65,11 @@
         }
         
         .photo-gallery {
-            display: flex;
+            display: grid;
             gap: 24px;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            /* Fotoğraflar esnek şekilde hizalanır */
         }
         
         .photo img {
@@ -137,12 +138,6 @@
         /* Medya Sorguları - Responsive Design */
         
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .subtitle {
-                font-size: 1.8em;
-            }
             .photo-gallery {
                 grid-template-columns: repeat(2, 1fr);
                 /* Fotoğraflar 2 sütun halinde hizalanır */
@@ -150,15 +145,23 @@
         }
         
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            .subtitle {
-                font-size: 1.5em;
-            }
             .photo-gallery {
-                grid-template-columns: repeat(2, 1fr);
-                /* 480px ve altı ekranlarda da 2 sütun halinde hizalanır */
+                grid-template-columns: 1fr 1fr;
+                /* 480px'den küçük ekranlarda iki fotoğraf yanyana gelir */
+            }
+            .photo-gallery .photo {
+                display: flex;
+                justify-content: center;
+                /* Fotoğraflar yatayda ortalanır */
+                align-items: center;
+                /* Fotoğraflar dikeyde ortalanır */
+            }
+            .photo img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                transition: transform 0.4s ease-in-out;
             }
         }
     </style>
@@ -191,12 +194,12 @@
             <div class="photo"><img src="foto4.jpg" alt="Anı 3"></div>
             <div class="photo"><img src="foto8.jpg" alt="Anı 1"></div>
             <div class="photo"><img src="foto6.jpg" alt="Anı 1"></div>
-            <div class="photo"><img src="foto7.jpg" alt="Anı 3"></div>
             <div class="photo"><img src="foto10.jpg" alt="Anı 3"></div>
-            <div class="photo"><img src="foto11.jpg" alt="Anı 3"></div>
             <div class="photo"><img src="foto14.jpg" alt="Anı 3"></div>
             <div class="photo"><img src="foto12.jpg" alt="Anı 3"></div>
+            <div class="photo"><img src="foto11.jpg" alt="Anı 3"></div>
             <div class="photo"><img src="foto15.jpg" alt="Anı 3"></div>
+
         </div>
     </section>
     <section class="love-note">
